@@ -1,0 +1,270 @@
+/*------------------------------------------
+**             08/01/2020
+**        Realizado por: AspectoX
+**        http://aspectox.esy.es/
+**      aspectox.creativa@gmail.com
+**------------------------------------------*/
+
+
+/* -----------------------
+* COMPLEMENTOS
+-------------------------- */
+
+
+/* Boton menu
+  --------------------- */
+
+button.boton-menu {
+    border: none;
+    color: #FFFFFF;
+    background-color: #08537d;
+    cursor: pointer;
+}
+
+
+/* -----------------------
+  * GENERAL
+  -------------------------- */
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 80px auto;
+    grid-template-rows: 150px auto 470px;
+    grid-template-areas: "header header" "navbar main" "footer footer";
+    width: 100%;
+    min-height: 100vh;
+    transition: all .100s ease;
+    &.active {
+        grid-template-columns: 200px auto;
+    }
+}
+
+
+/* -----------------------
+  * HEADER
+  -------------------------- */
+
+.navbar {
+    display: block;
+    grid-area: navbar;
+    background-color: #136898;
+    padding: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid aqua;
+    &>ul.navbar-lista {
+        width: 100%;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        &>li.navbar-item {
+            display: block;
+            width: 100%;
+            padding: 0.3125rem 0;
+            margin-bottom: 1.25rem;
+            &>a.navbar-link {
+                display: block;
+                width: 100%;
+                min-width: 300px;
+                color: #FFFFFF;
+            }
+            &>a.navbar-link:hover {
+                color: white;
+                text-decoration: none;
+            }
+            &>a.navbar-link>i.ax {
+                display: inline-block;
+                width: 20px;
+                color: #FFFFFF;
+                margin-right: 2.5rem;
+                padding: 0.3125rem 0.625rem;
+            }
+        }
+        &>li.navbar-item:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+
+/* -----------------------
+  * HEADER
+  -------------------------- */
+
+.header {
+    grid-area: header;
+    background-color: #08537d;
+    padding: 1.25rem;
+    position: relative;
+}
+
+.header-text {
+    display: inline-flex;
+    width: 50%;
+    font-size: 0.75rem;
+    color: #FFFFFF;
+}
+
+.logo {
+    padding-top: 2.5rem;
+}
+
+.navbar-social_lista {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &>.navbar-social_item {
+        display: inline-block;
+        padding: 0.3125rem 0.625rem;
+        position: relative;
+    }
+    &>.navbar-social_item>a {
+        color: #FFFFFF;
+    }
+    &>.navbar-social_item:hover>a {
+        color: #ffae00;
+        text-decoration: none;
+    }
+}
+
+
+/* -----------------------
+  * MAIN
+  -------------------------- */
+
+.main {
+    grid-area: main;
+    padding: 1.25rem 0 0 0;
+    position: relative;
+}
+
+
+/* -----------------------
+  * FOOTER
+  -------------------------- */
+
+.footer {
+    grid-area: footer;
+    background-color: #08537d;
+    padding: 1.25rem;
+    position: relative;
+}
+
+.footer1>p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer1 {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0;
+    margin: 1.25rem 0;
+    &>.footer-social_lista {
+        display: contents;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        &>.footer-social_item {
+            display: inline-block;
+            width: 52px;
+            height: 52px;
+            font-size: 1.125rem;
+            margin-left: 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            position: relative;
+            & a i.axl::before {
+                color: rgba(255, 255, 255, 0.5);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            & a:hover,
+            & a i:hover {
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+}
+
+.footer2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    & .site-address .address {
+        list-style: none;
+        margin: 1rem 0 0.5rem 0;
+        padding: 0;
+        & li {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1rem;
+            color: #dddddd;
+            margin-left: 1rem;
+        }
+    }
+    & p {
+        color: #dddddd;
+    }
+}
+
+
+/* -----------------------
+  * WIDGET
+  -------------------------- */
+
+
+/* -----------------------
+  * MEDIA
+  -------------------------- */
+
+
+/* sm */
+
+@media only screen and (min-width: 610px) {}
+
+
+/* md */
+
+@media only screen and (min-width: 816px) {
+    .logo {
+        padding-top: 1.875rem;
+    }
+}
+
+
+/* lg */
+
+@media only screen and (min-width: 1024px) {
+    .container-grid {
+        grid-template-rows: 150px auto 300px;
+    }
+    .logo {
+        padding-top: 1.25rem;
+    }
+}
+
+
+/* xl */
+
+@media only screen and (min-width: 1260px) {
+    .logo {
+        padding-top: 0.625rem;
+    }
+}
+
+
+/* xxl */
+
+@media only screen and (min-width: 1860px) {
+    .logo {
+        margin-bottom: 5px;
+        position: absolute;
+        top: 0px;
+        left: 30%;
+    }
+}
